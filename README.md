@@ -25,9 +25,6 @@ ssh -L 3001:localhost:3001 ana@anacnu.kr -p 8082
 
 브라우저에서 `http://localhost:3001` 접속 후 로그인합니다.
 
-- 초기 아이디: admin
-- 초기 비밀번호: admin
-
 ## 수집 항목
 
 - CPU 사용량
