@@ -1,0 +1,33 @@
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+  node-exporter:
+    image: prom/node-exporter
+    container_name: node-exporter
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    environment:
+      - GF_SERVER_ROOT_URL=http://localhost:3001
+    volumes:
+      - grafana_data:/var/lib/grafana
+    ports:
+      - "3001:3000"
+    networks:
+      - default
+      - dmoj_nginx_network
+    restart: unless-stopped
+volumes:
+  prometheus_data:
+  grafana_data:
+networks:
+  dmoj_nginx_network:
+    external: true
