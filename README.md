@@ -1,7 +1,9 @@
 # ANAserver
 
 ANA 동아리 서버(Coss) 리소스 사용량 모니터링 프로젝트입니다.
+
 ANAGETDON 대회 당일 서버 트래픽 및 리소스 사용량을 수집하고 시각화합니다.
+
 <img width="2424" height="1799" alt="image" src="https://github.com/user-attachments/assets/6999e76f-5baa-4456-9efd-62c2b1d9f5c1" />
 
 ## 기술 스택
